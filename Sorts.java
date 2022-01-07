@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 @SuppressWarnings("unchecked")
 
-public class Sorts
-{
+public class Sorts {
   public static ArrayList populate( int size, int lo, int hi ) {
     ArrayList<Integer> retAL = new ArrayList<Integer>();
     while( size > 0 ) {
@@ -14,8 +13,7 @@ public class Sorts
   }
 
   //randomly rearrange elements of an ArrayList
-  public static void shuffle( ArrayList al )
-  {
+  public static void shuffle( ArrayList al ) {
     int randomIndex;
     //setup for traversal fr right to left
     for( int i = al.size()-1; i > 0; i-- ) {
@@ -25,6 +23,8 @@ public class Sorts
       al.set( i, al.set( randomIndex, al.get(i) ) );
     }
   }
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
     for(int i = 0; i < data.size()-1; i++) { //
@@ -37,6 +37,25 @@ public class Sorts
     	}
     }
   }
+
+  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
+    ArrayList ans = new ArrayList<Comparable>();
+    ans.add(input.get(0));
+    for (int j=1; j<input.size(); j++) {
+      for (int i=0; i<ans.size(); i++) {
+        if ((int)ans.get(i) >= (int)input.get(j)) {
+          ans.add(i, input.get(j));
+          break;
+        }
+      }
+      if ((int)input.get(j) > (int)ans.get(ans.size()-1)) {
+        ans.add(input.get(j));
+      }
+    }
+    return ans;
+  }
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void selectionSortV( ArrayList<Comparable> data ) {
     int maxPos;
@@ -63,9 +82,23 @@ public class Sorts
     }
   }//end selectionSort
 
+  public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input ) {
+    //declare and initialize empty ArrayList for copying
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
 
-  public static void insertionSortV( ArrayList<Comparable> data )
-  {
+    //copy input ArrayList into working ArrayList
+    for( Comparable o : input )
+      data.add( o );
+
+    //sort working ArrayList
+    selectionSortV( data );
+
+    return data;
+  }//end selectionSort
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  public static void insertionSortV( ArrayList<Comparable> data ) {
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
 
@@ -88,5 +121,20 @@ public class Sorts
       }
     }
   }//end insertionSortV
+
+  public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) {
+    //declare and initialize empty ArrayList for copying
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
+
+    //copy input ArrayList into working ArrayList
+    for( Comparable o : input )
+      data.add( o );
+
+    //sort working ArrayList
+    insertionSortV( data );
+
+    //return working ArrayList
+    return data;
+  }//end insertionSort
 
 }
