@@ -1,7 +1,7 @@
 # sort-o_OrangeBananas
 ### Song of the Week: Kapustin Etudes Op.40
-### Nina Jiang, Zhengxi He, Russell Goychayev
-#
+### Nina Jiang, Zhengxi He, Russell Goychayev # 
+
 
 ## Bubble Sort
 ### Best-Case Scenario:
