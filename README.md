@@ -11,14 +11,14 @@
 **Worst-Case Scenario:**
 * The worst-case scenario for bubble sort is a list that is in reverse order. Each traversal by bubbleSort will only order one element at a time, forcing the method to make many passes.
 
-### Selection Sort
+## Selection Sort
 **Best-Case Scenario:**
 * The best-case scenario for selection sort is
 
 **Worst-Case Scenario:**
 * The worst-case scenario for selection sort is
 
-### Insertion Sort
+## Insertion Sort
 **Best-Case Scenario:**
 * The best-case scenario for insertion sort is
 
