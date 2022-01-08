@@ -4,7 +4,7 @@
 **Song of the Week:** Kapustin Etudes Op.40
 
 
-### Bubble Sort
+## Bubble Sort
 **Best-Case Scenario:**
 * The best-case scenario for bubble sort is a completedly sorted list in ascending order because bubbleSort won't need to make any swaps for this list and will traverse it once for it to be considered completely sorted.
 
