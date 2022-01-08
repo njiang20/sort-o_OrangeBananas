@@ -27,9 +27,9 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
-    for(int i = 0; i < data.size()-1; i++) { //
-    	for(int j = data.size() - 1; j > i; j--){
-    		if((int)data.get(j) < (int)data.get(j - 1)) {
+    for(int i = 0; i < data.size()-1; i++) { //completes n - 1 passes
+    	for(int j = data.size() - 1; j > i; j--){ //traversal of the list
+    		if((int)data.get(j) < (int)data.get(j - 1)) { //comparing adjacent terms
       		    int temp = (int)data.get(j);
       		    data.set(j, data.get(j - 1));
       		    data.set(j-1, temp);
