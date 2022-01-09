@@ -27,12 +27,14 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
+    int passCtr = 0;
     for(int i = 0; i < data.size()-1; i++) { //completes n - 1 passes
     	for(int j = data.size() - 1; j > i; j--){ //traversal of the list
     		if((int)data.get(j) < (int)data.get(j - 1)) { //comparing adjacent terms
       		    int temp = (int)data.get(j);
       		    data.set(j, data.get(j - 1));
       		    data.set(j-1, temp);
+              passCtr++;
     		}
     	}
     }
@@ -59,7 +61,7 @@ public class Sorts {
 
   public static void selectionSortV( ArrayList<Comparable> data ) {
     int maxPos;
-
+    int passCtr = 0;
     for(int pass = data.size() - 1; pass > 0; pass--) {
       System.out.println( "\nbegin pass " + (data.size() - pass) );//diag
       maxPos = pass;
@@ -77,7 +79,7 @@ public class Sorts {
       Comparable temp = data.get(pass);
       data.set(pass, data.get(maxPos));
       data.set(maxPos, temp);
-
+      passCtr++;
       System.out.println( "after swap: " +  data );//diag
     }
   }//end selectionSort
@@ -115,6 +117,7 @@ public class Sorts {
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
 
           data.set( i, data.set( i-1, data.get(i) ) );
+          passCtr++;
         }
         else
           break;
