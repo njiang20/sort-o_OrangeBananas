@@ -28,13 +28,16 @@ public class Sorts {
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
     int passCtr = 0;
+    int compCtr = 0;
+    int swapCtr = 0;
     for(int i = 0; i < data.size()-1; i++) { //completes n - 1 passes
     	for(int j = data.size() - 1; j > i; j--){ //traversal of the list
+        compCtr++; //comparison
     		if((int)data.get(j) < (int)data.get(j - 1)) { //comparing adjacent terms
       		    int temp = (int)data.get(j);
       		    data.set(j, data.get(j - 1));
       		    data.set(j-1, temp);
-              passCtr++;
+              swapCtr++; //data.set swaps
     		}
     	}
     }
@@ -58,11 +61,15 @@ public class Sorts {
   public static void selectionSortV( ArrayList<Comparable> data ) {
     int maxPos;
     int passCtr = 0;
+    int compCtr = 0;
+    int swapCtr = 0;
     for(int pass = data.size() - 1; pass > 0; pass--) {
       System.out.println( "\nbegin pass " + (data.size() - pass) );//diag
       maxPos = pass;
+      passCtr++;
 
       for(int i = pass - 1; i >= 0; i--) {
+        compCtr++; //nexr line compares
         if((int)data.get(i) > (int)data.get(maxPos)) {
           maxPos = i;
         }
@@ -75,7 +82,7 @@ public class Sorts {
       Comparable temp = data.get(pass);
       data.set(pass, data.get(maxPos));
       data.set(maxPos, temp);
-      passCtr++;
+      swapCtr++; //data.set is swapping
       System.out.println( "after swap: " +  data );//diag
     }
   }//end selectionSort
@@ -97,6 +104,9 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void insertionSortV( ArrayList<Comparable> data ) {
+    int passCtr = 0;
+    int compCtr = 0;
+    int swapCtr = 0;
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
 
@@ -105,7 +115,7 @@ public class Sorts {
 
       //traverse sorted region from right to left
       for(int i = partition; i > 0; i--) {
-
+        compCtr++; //if statement compares
         // "walk" the current item to where it belongs
         // by swapping adjacent items
         if (data.get(i).compareTo(data.get(i - 1)) < 0) {
@@ -113,7 +123,7 @@ public class Sorts {
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
 
           data.set( i, data.set( i-1, data.get(i) ) );
-          passCtr++;
+          swapCtr++; //elements at the index are being swapped
         }
         else
           break;
