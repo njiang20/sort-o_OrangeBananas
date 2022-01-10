@@ -40,6 +40,9 @@ public class Sorts {
     		}
     	}
     }
+    System.out.println("Number of passes: " + data.size() - 1);
+    System.out.println("Number of comparisons: " + compCtr);
+    System.out.println("Number of swaps: " + swapCtr);
   }
 
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
@@ -83,6 +86,9 @@ public class Sorts {
       swapCtr++; //data.set is swapping
       System.out.println( "after swap: " +  data );//diag
     }
+    System.out.println("Number of passes: " + data.size() - 1);
+    System.out.println("Number of comparisons: " + compCtr);
+    System.out.println("Number of swaps: " + swapCtr);
   }//end selectionSort
 
   public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input ) {
@@ -125,6 +131,9 @@ public class Sorts {
           break;
       }
     }
+    System.out.println("Number of passes: " + data.size() - 1);
+    System.out.println("Number of comparisons: " + compCtr);
+    System.out.println("Number of swaps: " + swapCtr);
   }//end insertionSortV
 
   public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) {
