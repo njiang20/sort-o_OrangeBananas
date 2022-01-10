@@ -1,8 +1,15 @@
+Team Orange Bananas: Nina Jiang, Zhengxi He, Russell Goychayev
+APCS08
+L04: Never Fear, Big O is Here!
+
 DISCOS:
  * selectionSort has no best and worst case. Thus, selectionSort will be the most efficient at sorting an array that is in reverse order, which is typically the worst-case scenario for bubbleSort and insertionSort
- *
+ * bubbleSort and insertionSort make the same number of swaps no matter the array list used.
+ * selectionSort always gives 9 passes, 45 comparisons, and 9 swaps no matter the array, thus proving it has no worst or best-case scenario.
+
 QCCS:
  * Is passCtr necessary when the number of passes is essentially data.size() - 1 for all sorts?
+ * How do the counters (compCtr, swapCtr, passCtr) prove/disprove sort efficiency?
 
 BUB-QA:
  * q0: If a pass requires no swaps, what do you know?
