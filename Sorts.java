@@ -71,7 +71,6 @@ public class Sorts {
     for(int pass = data.size() - 1; pass > 0; pass--) {
       System.out.println( "\nbegin pass " + (data.size() - pass) );//diag
       maxPos = pass;
-      passCtr++;
 
       for(int i = pass - 1; i >= 0; i--) {
         compCtr++; //nexr line compares
