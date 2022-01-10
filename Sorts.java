@@ -27,7 +27,6 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
-    int passCtr = 0;
     int compCtr = 0;
     int swapCtr = 0;
     for(int i = 0; i < data.size()-1; i++) { //completes n - 1 passes
@@ -60,7 +59,6 @@ public class Sorts {
 
   public static void selectionSortV( ArrayList<Comparable> data ) {
     int maxPos;
-    int passCtr = 0;
     int compCtr = 0;
     int swapCtr = 0;
     for(int pass = data.size() - 1; pass > 0; pass--) {
@@ -104,12 +102,10 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void insertionSortV( ArrayList<Comparable> data ) {
-    int passCtr = 0;
     int compCtr = 0;
     int swapCtr = 0;
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
-
       System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
       System.out.println( data );
 
