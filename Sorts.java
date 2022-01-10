@@ -42,9 +42,9 @@ public class Sorts {
     		}
     	}
     }
-    System.out.println("Number of passes: " + passCtr);
-    System.out.println("Number of comparisons: " + compCtr);
-    System.out.println("Number of swaps: " + swapCtr);
+    System.out.println("bubbleSort # of passes: " + passCtr);
+    System.out.println("bubbleSort # of comparisons: " + compCtr);
+    System.out.println("bubbleSort # of swaps: " + swapCtr);
   }
 
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
@@ -90,9 +90,9 @@ public class Sorts {
       swapCtr++; //data.set is swapping
       System.out.println( "after swap: " +  data );//diag
     }
-    System.out.println("Number of passes: " + passCtr);
-    System.out.println("Number of comparisons: " + compCtr);
-    System.out.println("Number of swaps: " + swapCtr);
+    System.out.println("selectionSort # of passes: " + passCtr);
+    System.out.println("selectionSort # of comparisons: " + compCtr);
+    System.out.println("selectionSort # of swaps: " + swapCtr);
   }//end selectionSort
 
   public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input ) {
@@ -137,9 +137,9 @@ public class Sorts {
           break;
       }
     }
-    System.out.println("Number of passes: " + passCtr);
-    System.out.println("Number of comparisons: " + compCtr);
-    System.out.println("Number of swaps: " + swapCtr);
+    System.out.println("insertionSort # of passes: " + passCtr);
+    System.out.println("insertionSort # of comparisons: " + compCtr);
+    System.out.println("insertionSort # of swaps: " + swapCtr);
   }//end insertionSortV
 
   public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) {
