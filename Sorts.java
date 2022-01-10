@@ -27,8 +27,10 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
+    int passCtr = 0;
     int compCtr = 0;
     int swapCtr = 0;
+    passCtr = data.size() - 1;
     for(int i = 0; i < data.size()-1; i++) { //completes n - 1 passes
     	for(int j = data.size() - 1; j > i; j--){ //traversal of the list
         compCtr++; //comparison
@@ -40,7 +42,7 @@ public class Sorts {
     		}
     	}
     }
-    System.out.println("Number of passes: " + data.size() - 1);
+    System.out.println("Number of passes: " + passCtr);
     System.out.println("Number of comparisons: " + compCtr);
     System.out.println("Number of swaps: " + swapCtr);
   }
@@ -62,8 +64,10 @@ public class Sorts {
 
   public static void selectionSortV( ArrayList<Comparable> data ) {
     int maxPos;
+    int passCtr = 0;
     int compCtr = 0;
     int swapCtr = 0;
+    passCtr = data.size() - 1;
     for(int pass = data.size() - 1; pass > 0; pass--) {
       System.out.println( "\nbegin pass " + (data.size() - pass) );//diag
       maxPos = pass;
@@ -86,7 +90,7 @@ public class Sorts {
       swapCtr++; //data.set is swapping
       System.out.println( "after swap: " +  data );//diag
     }
-    System.out.println("Number of passes: " + data.size() - 1);
+    System.out.println("Number of passes: " + passCtr);
     System.out.println("Number of comparisons: " + compCtr);
     System.out.println("Number of swaps: " + swapCtr);
   }//end selectionSort
@@ -108,8 +112,10 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void insertionSortV( ArrayList<Comparable> data ) {
+    int passCtr = 0;
     int compCtr = 0;
     int swapCtr = 0;
+    passCtr = data.size() - 1;
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
       System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
@@ -131,7 +137,7 @@ public class Sorts {
           break;
       }
     }
-    System.out.println("Number of passes: " + data.size() - 1);
+    System.out.println("Number of passes: " + passCtr);
     System.out.println("Number of comparisons: " + compCtr);
     System.out.println("Number of swaps: " + swapCtr);
   }//end insertionSortV
