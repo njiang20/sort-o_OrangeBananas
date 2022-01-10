@@ -3,7 +3,31 @@ DISCOS:
 QCCS:
 
 BUB-QA:
+ * q0: If a pass requires no swaps, what do you know?
+ * a0: This means that the array is already in increasing order.
+ * q1: After pass p, what do you know?
+ * a1: After pass p, we know that the first p values are correct.
+ * q2: How many passes are necessary to completely sort?
+ * a2: Th number of passes needed to completely sort is p - 1 passes.
 
 SEL-QA:
+* q0: How many passes to sort n elements?
+* a0: n - 1 passes are needed to sort n elements.
+* q1: What do you know after pass p?
+* a1: After pass p, we know p elements have been completely sorted.
+* q2: How do you know if sorted?
+* a2: n - 1 passes have occured.
+* q3: What does a pass boil down to?
+* a3: A pass is recursive. It finds the smallest in an array, the next smallest, and etc.
 
 INS-QA:
+* q0: How many passes to sort n elements?
+* a0: n - 1 passes
+* q1: What do you know after pass p?
+* a1: The element that was at index p are now in the sorted region.
+* q2: How will you know when sorted?
+* a2: n - 1 passes have occured.
+* q3: What constitues a pass?
+* a3: When one element at a time is "walked" into the sorted region separated by the partition.
+* q4: What must you track?
+* a4: The index at which the partition is, which increments the size of the sorted region by one.
