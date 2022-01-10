@@ -6,10 +6,10 @@
 
 ## Bubble Sort
 **Best-Case Scenario:**
-* The best-case scenario for bubble sort is O(n^2) because even if a greater value is found while iterating through the ArrayList, bubblesort continues iterating.
+* The best-case scenario for bubble sort is O(n^2) comparisons and swaps because even if a greater value is found while iterating through the ArrayList, bubblesort continues iterating.
 
 **Worst-Case Scenario:**
-* The best-case scenario for bubble sort is O(n^2) because
+* The best-case scenario for bubble sort is O(n^2) comparisons and swaps for the same reason.
 
 
 ## Selection Sort
