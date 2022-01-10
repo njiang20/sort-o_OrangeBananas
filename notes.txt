@@ -1,6 +1,8 @@
 DISCOS:
-
+ * selectionSort has no best and worst case. Thus, selectionSort will be the most efficient at sorting an array that is in reverse order, which is typically the worst-case scenario for bubbleSort and insertionSort
+ *
 QCCS:
+ * Is passCtr necessary when the number of passes is essentially data.size() - 1 for all sorts?
 
 BUB-QA:
  * q0: If a pass requires no swaps, what do you know?
