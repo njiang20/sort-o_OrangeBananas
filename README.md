@@ -6,10 +6,11 @@
 
 ## Bubble Sort
 **Best-Case Scenario:**
-* The best-case scenario for bubble sort is a completely sorted list in ascending order because bubble sort won't need to make any swaps for this list and will traverse it once for it to be considered completely sorted.
+* The best-case scenario for bubble sort is O(n^2) because even if a greater value is found while iterating through the ArrayList, bubblesort continues iterating.
 
 **Worst-Case Scenario:**
-* The worst-case scenario for bubble sort is a list that is in reverse order. Each traversal by bubble sort will only order one element at a time, forcing the method to make many passes.
+* The best-case scenario for bubble sort is O(n^2) because
+
 
 ## Selection Sort
 **Best-Case Scenario:**
