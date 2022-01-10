@@ -25,9 +25,3 @@
 
 **Worst-Case Scenario:**
 * The worst-case scenario for insertion sort is, like bubble sort, a list in reverse order. Each element will have to be "walked" many times to reach its place in the sorted region of the list, making it the worst-case scenario for insertion sort.
-
-| Sort Type | # Passes | # Comparisons | # Swaps |
-| ----------- | ----------- | ----------- | ----------- |
-| Bubble | 9 | 45 | 23 |
-| Selection | 9 | 45 | 9 |
-| Insertion | 9 | 29 | 23 |

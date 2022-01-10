@@ -4,6 +4,12 @@ DISCOS:
 QCCS:
  * Is passCtr necessary when the number of passes is essentially data.size() - 1 for all sorts?
 
+ | Sort Type | # Passes | # Comparisons | # Swaps |
+ | ----------- | ----------- | ----------- | ----------- |
+ | Bubble | 9 | 45 | 23 |
+ | Selection | 9 | 45 | 9 |
+ | Insertion | 9 | 29 | 23 |
+
 BUB-QA:
  * q0: If a pass requires no swaps, what do you know?
  * a0: This means that the array is already in increasing order.
