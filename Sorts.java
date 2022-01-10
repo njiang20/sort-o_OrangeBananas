@@ -39,20 +39,16 @@ public class Sorts {
   }
 
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
-    ArrayList ans = new ArrayList<Comparable>();
-    ans.add(input.get(0));
-    for (int j=1; j<input.size(); j++) {
-      for (int i=0; i<ans.size(); i++) {
-        if ((int)ans.get(i) >= (int)input.get(j)) {
-          ans.add(i, input.get(j));
-          break;
-        }
-      }
-      if ((int)input.get(j) > (int)ans.get(ans.size()-1)) {
-        ans.add(input.get(j));
-      }
-    }
-    return ans;
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
+
+    //copy input ArrayList into working ArrayList
+    for( Comparable o : input )
+      data.add( o );
+
+    //sort working ArrayList
+    bubbleSortV( data );
+
+    return data;
   }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
